@@ -1,0 +1,142 @@
+.chatSection{
+  display: flex;
+  flex-direction: column;
+  border: .1rem solid #f5f5f5;
+  background: whitesmoke;
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+margin: 5rem;
+max-height:75vh;
+width: 50vw;
+
+
+
+
+}
+.chat{
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* border: 1px solid saddlebrown; */
+  /* margin: 2rem; */
+  /* align-items: center; */
+   /* margin-bottom: 2rem; */
+   overflow: scroll;
+overflow-x: hidden;
+scroll-behavior: smooth;
+height: 70vh;
+}
+
+.chat__header{
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  /* align-items: flex-end; */
+  position: sticky;
+  top: 0;
+  background-color: aliceblue;
+  width:100%;
+  z-index: 1;
+
+}
+.userProfile {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: .4rem;
+}
+.signOut{
+display: flex;
+flex-direction: column;
+  margin: .4rem;
+
+  /* margin: 2px 5px; */
+  /* justify-content: flex-end; */
+  /* align-items: flex-end; */
+
+}
+.signOut > button{
+  background-color: aliceblue;
+  outline: none;
+  border: none;
+  font-size: xx-large;
+  color: gray;
+  cursor: pointer;
+  margin: .4rem;
+
+}
+.signOut > button:hover{
+color: black;
+}
+.header__avatar{
+  object-fit: contain;
+
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 2px 5px;
+}
+
+
+.chat__input{
+   display: flex;
+  /* border: 1px solid lightgray; */
+  /* border-radius: 30px; */
+  padding: 10px;
+  color: gray;
+  padding-left: 15px ;
+  background-color: white;
+/* width: 79vw; */
+/* position:fixed; */
+  bottom: 0;
+
+
+}
+.chat__input > form{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  
+  
+}
+.chat__input > form > input{
+  border: none;
+  flex: 1;
+  margin-left: 10px;
+  outline-width: 0;
+  font-weight: 400;
+  font-size: larger;
+  outline: none;
+  border: none;
+
+}
+form> button{
+  /* display: none; */
+  border: none;
+  outline: none;
+  outline-style: none;
+  outline-width: none;
+  background-color: white;
+  font-size: large;
+
+}
+form> button:hover{
+  cursor: pointer;
+}
+.chat__icon{
+  font-size: xx-large;
+  color: gray;
+}
+@media screen and (max-width: 600px) {
+  .chatSection{
+    /* margin: 20px 0; */
+    width: 330px;
+    margin: 1rem;
+
+  }
+
+}
