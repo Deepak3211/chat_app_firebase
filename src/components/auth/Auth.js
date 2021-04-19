@@ -17,7 +17,6 @@ const Auth = () => {
           user: result.user
         })
         
-        // localStorage.setItem('token',{token:result.user.refreshToken,name: result.user.displayName,photoURL:result.user.photoURL})
       })
       .catch(error=> {
   console.log(error);

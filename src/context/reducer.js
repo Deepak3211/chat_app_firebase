@@ -1,7 +1,7 @@
 import {  SET_USER } from './action-types';
 
 export const initialState = {
-  user: localStorage.getItem('token') || null,
+user: null,
 };
 
 const reducer = (state, action) => {
