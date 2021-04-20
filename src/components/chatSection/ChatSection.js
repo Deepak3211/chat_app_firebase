@@ -3,7 +3,6 @@ import {GrEmoji } from 'react-icons/gr';
 import { useEffect, useRef, useState } from 'react';
 import db, { auth }  from '../../config/firebase';
 import { useStateValue } from '../../context/StateProvider';
-import firebase from 'firebase/app'
 import Message from './Message';
 import { v4 as uuidv4 } from 'uuid';
 import {FiSend , FiLogOut} from 'react-icons/fi'
@@ -16,12 +15,14 @@ const [input, setInput] = useState('');
 const [message, setMessage] = useState([]);
 const messageRef = useRef(null)
 
+  
 const scrollToBottom = () => {
 messageRef.current?.scrollIntoView({behavior: 'smooth'})
 }
 useEffect(() => {
 scrollToBottom()
-},[message])
+}, [message])
+  
 useEffect(() => {
 db.collection('messages').orderBy('timestamp','asc').onSnapshot(snapshot => {
 setMessage(snapshot.docs.map(doc => doc.data()))
@@ -37,8 +38,9 @@ db.collection('messages').doc(uuidv4()).set({
 id: uuidv4(),
 msg: input,
 name: user.displayName,
+email: user.email,
 photoURL: user.photoURL,
-timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+timestamp: new Date(),
 
 })
 setInput('')
@@ -70,7 +72,7 @@ return (
 {/* <h2>SuperChat</h2> */}
 <div className="chat">
 {message && message.map(msg => (
-<Message key={msg.id} name={msg.name} photoURL = {msg.photoURL} message={msg.msg} timestamp = {msg.timestamp} />
+<Message key={msg.id} email={msg.email} photoURL = {msg.photoURL} message={msg.msg} timestamp = {msg.timestamp?.toDate().toString()} />
 ))}
 <div ref = {messageRef}></div>
 </div>
