@@ -6,7 +6,7 @@ background: whitesmoke;
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 backdrop-filter: blur( 4px );
 -webkit-backdrop-filter: blur( 4px );
-border: 1px solid rgba( 255, 255, 255, 0.18 );
+border: 1px solid rgba(170, 224, 19, 0.952);
 max-height:75vh;
 width: 50vw;
 
@@ -20,6 +20,7 @@ overflow: scroll;
 overflow-x: hidden;
 scroll-behavior: smooth;
 height: 70vh;
+background-color: rgba(185, 185, 181, 0.315);
 }
 
 .chat__header{
@@ -29,7 +30,7 @@ justify-content: space-between;
 /* align-items: flex-end; */
 position: sticky;
 top: 0;
-background-color: aliceblue;
+background-color:aliceblue;
 width:100%;
 z-index: 1;
 
@@ -78,7 +79,7 @@ margin: 2px 5px;
 display: flex;
 padding: 10px;
 color: gray;
-background-color: white;
+background-color: aliceblue;
 
 
 }
@@ -99,6 +100,8 @@ font-weight: 400;
 font-size: larger;
 outline: none;
 border: none;
+background-color: aliceblue;
+
 
 }
 form> button{
@@ -107,8 +110,9 @@ border: none;
 outline: none;
 outline-style: none;
 outline-width: none;
-background-color: white;
 font-size: large;
+background-color: aliceblue;
+
 
 }
 form> button:hover{
